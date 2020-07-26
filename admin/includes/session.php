@@ -2,7 +2,7 @@
 
 class Session {
 
-	private $signed_in;
+	private $signed_in = false;
 	public $user_id;
 
 	function __construct(){
@@ -16,6 +16,17 @@ class Session {
 		}else{
 			unset($this->user_id);
 			$this->signed_in=false;
+		}
+	}
+
+	public function is_signed_in(){
+		return $this->$signed_in;
+	}
+
+	public function login($user){
+		if($user){
+			$this->user_id = $_SESSION['user_id'] = $user->id;
+			$this->signed_in = true;
 		}
 	}
 
