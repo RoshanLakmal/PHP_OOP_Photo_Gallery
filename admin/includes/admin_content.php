@@ -6,6 +6,11 @@
                         <h1 class="page-header">
                             Blank Page
                             <small>Subheading</small>
+                            <?php 
+                                if($database->connection){
+                                    echo "true";
+                                }
+                            ?>
                         </h1>
                         <ol class="breadcrumb">
                             <li>
