@@ -23,6 +23,13 @@
                                 $found_user = User::find_user_by_id(2);
                                 echo $found_user->username;
                                 
+                                $newUser = new User();
+                                $newUser->username = "hansi";
+                                $newUser->password = "123";
+                                $newUser->first_name = "Hansika";
+                                $newUser->last_name = "Hantanapitiya";
+                                $newUser->create();
+                                echo $newUser->id;
                             ?>
                         <ol class="breadcrumb">
                             <li>
