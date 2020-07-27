@@ -1,12 +1,6 @@
 <?php ob_start(); ?>
 <?php require_once("init.php"); ?>
-<?php 
-
-if(!$session->is_signed_in()){
-    header("Location:login.php");
-}
-
-?>
+<?php if(!$session->is_signed_in()) {redirect($location);} ?>
 <!DOCTYPE html>
 <html lang="en">
 
