@@ -16,20 +16,24 @@
                                 // $found_user = User::find_user_by_id(2);
                                 // $user = User::instantation($found_user);                         
                                 // echo $user->username;
-                                $users = User::find_all_users();
-                                foreach ($users as $user) {
-                                    echo $user->username . "<br>";
-                                }
-                                $found_user = User::find_user_by_id(2);
-                                echo $found_user->username;
+                                // $users = User::find_all_users();
+                                // foreach ($users as $user) {
+                                //     echo $user->username . "<br>";
+                                // }
+                                // $found_user = User::find_user_by_id(2);
+                                // echo $found_user->username;
                                 
-                                $newUser = new User();
-                                $newUser->username = "hansi";
-                                $newUser->password = "123";
-                                $newUser->first_name = "Hansika";
-                                $newUser->last_name = "Hantanapitiya";
-                                $newUser->create();
-                                echo $newUser->id;
+                                // $newUser = new User();
+                                // $newUser->username = "hansi";
+                                // $newUser->password = "123";
+                                // $newUser->first_name = "Hansika";
+                                // $newUser->last_name = "Hantanapitiya";
+                                // $newUser->create();
+                                // echo $newUser->id;
+                                $user = User::find_user_by_id(3);
+                                $user->last_name = "HatanaPitiya";
+                                $user->update();
+
                             ?>
                         <ol class="breadcrumb">
                             <li>
